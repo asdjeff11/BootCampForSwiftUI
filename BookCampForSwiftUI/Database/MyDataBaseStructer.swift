@@ -42,8 +42,21 @@ extension MyDataBaseStructer {
     }
 }
 
-struct MyITuneData:MyDataBaseStructer {
+struct MyITuneData:MyDataBaseStructer, Identifiable, Equatable {
     static var tableName: String = "CollectITuneData"
+    
+    struct CompositeID: Hashable { // 複合 ID 自身需要 Hashable
+        let trackId: Int
+        let trackName: String
+    }
+    // 計算屬性 id 返回這個複合 ID
+    var id: CompositeID {
+        CompositeID(trackId: trackId, trackName: trackName)
+    }
+    
+    static func == (lhs: MyITuneData, rhs: MyITuneData) -> Bool {
+        lhs.id == rhs.id // 直接比較 id (複合 ID)
+    }
     
     var trackId:Int = 0
     var trackName:String = ""

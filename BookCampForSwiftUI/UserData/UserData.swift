@@ -6,72 +6,89 @@
 //
 
 import Foundation
-import UIKit
-class UserData {
-    private var collectDatas:[Int:[Int:MyITuneData]] = [:] // 類別 => [trackId => Data]
-    private let userDefault = UserDefaults()
-    private var themeType:Theme.ThemeStyle = .LightTheme
+
+@MainActor
+class UserData:ObservableObject {
+    static let shared = UserData()
     
-    init() {
-        if let themeStyle = userDefault.value(forKey: "ThemeStyle") as? String ,
-           let type = Theme.ThemeStyle(rawValue: themeStyle) {
-            themeType = type
+    enum Language:String, CaseIterable, Identifiable {
+        case english = "en"
+        case chinese = "zh-Hant"
+        var id: String { self.rawValue }
+        var displayName: String {
+            switch self {
+            case .english: return "English"
+            case .chinese: return "繁體中文"
+            }
         }
+    }
+    
+    
+    @Published private var collectDatas:[Int:[Int:MyITuneData]] = [:] // 類別 => [trackId => Data]
+    @Published private var language:Language = .chinese {
+        didSet {
+            if oldValue != language {
+                UserDefaults.standard.set(language.rawValue, forKey: LANGUAGEUSERKEY)
+            }
+        }
+    }
+    private var localizedStrings: [String: String] = [:]
+    
+    var selectedLanguage: Language {
+        get { language }
+        set { setUserLanguage(language: newValue) }
+    }
+    
+    private let dbActor = MyDataBaseActor.shared
+    
+    private init() {
+        let savedLanguageCode = UserDefaults.standard.string(forKey: LANGUAGEUSERKEY)
+        let initialLanguage = Language(rawValue: savedLanguageCode ?? "") ?? .chinese
+        _language = Published(initialValue: initialLanguage)
+        
         for type in MediaType.allCases {
             collectDatas[type.rawValue] = [:]
         }
-        
-        getDbData()
+        Task {
+            do {
+                try await self.dbActor.executeQuery(query: MyITuneData.createTable())
+                await self.getDbData()
+            } catch {
+                print("DB get data error!")
+            }
+        }
     }
     
-    private func getDbData() {
+    private func getDbData() async {
         let query = "Select * from `CollectITuneData` ;"
-        let ITuneDatas:[MyITuneData] = db.read2Object(query: query)
-        for data in ITuneDatas {
-            collectDatas[data.type]?[data.trackId] = data
+        do {
+            let ITuneDatas: [MyITuneData] = try await dbActor.read2Object(query: query)
+            for data in ITuneDatas {
+                collectDatas[data.type]?[data.trackId] = data
+            }
+        } catch {
+            print("GetDbData failed - \(error)")
         }
     }
 }
 
-// 主題色
 extension UserData {
-    func getSecondColor()->UIColor {
-        themeType.getSecondColor()
-    }
-    
-    func getMainColor()->UIColor {
-        themeType.getMainColor()
-    }
-    
-    func getThemeType()->Theme.ThemeStyle {
-        themeType
-    }
-    
-    func updateThemeType(type:Theme.ThemeStyle) {
-        userDefault.set(type.rawValue, forKey: "ThemeStyle")
-        themeType = type
-    }
-}
-
-// 新增 刪除 追蹤
-extension UserData {
-    func saveData(data:MyITuneData) {
-        db.executeQuery(query: data.getUpdateQuery())
+    func saveData(data:MyITuneData) async throws {
+        try await dbActor.executeQuery(query: data.getUpdateQuery())
         self.collectDatas[data.type]?[data.trackId] = data
     }
     
-    func removeData(type:MediaType,trackId:Int) {
+    func removeData(type:MediaType,trackId:Int) async throws {
         let query = """
         DELETE FROM `\(MyITuneData.tableName)` WHERE `trackId` = \(trackId) and `type` = \(type.rawValue);
         """
-        db.executeQuery(query: query)
         
+        try await dbActor.executeQuery(query: query)
         collectDatas[type.rawValue]?.removeValue(forKey: trackId)
     }
 }
 
 
-// 取得追蹤
 extension UserData {
     func getCollectMedia(type:MediaType)->[MyITuneData] {
         guard let datas = collectDatas[type.rawValue]?.values else { return [] }
@@ -94,7 +111,7 @@ extension UserData {
             count += datas.values.count
         }
         
-        count += 1000   // 為了展示收藏數量千分位 而使用 , 真實數量扣除掉此行
+        //count += 1000   // 為了展示收藏數量千分位 而使用 , 真實數量扣除掉此行
         
         if #available(iOS 15.0, *) {
             return count.formatted()
@@ -106,5 +123,21 @@ extension UserData {
             return formate.string(from: NSNumber(value:count)) ?? "\(count)"
         }
         
+    }
+}
+
+extension UserData {
+    func setUserLanguage( language: Language ) {
+        if self.language != language {
+            self.language = language
+        }
+    }
+    
+    func getUserLanguage_display()-> String {
+        language.displayName
+    }
+    
+    func getUserLanguage()-> Language {
+        language
     }
 }

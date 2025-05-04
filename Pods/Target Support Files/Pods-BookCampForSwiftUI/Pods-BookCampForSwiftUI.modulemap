@@ -1,0 +1,6 @@
+framework module Pods_BookCampForSwiftUI {
+  umbrella header "Pods-BookCampForSwiftUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

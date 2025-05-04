@@ -5,3 +5,21 @@
 //  Created by 楊宜濱 on 2025/5/3.
 //
 
+"搜尋" = "search";
+"個人資料" = "personal data";
+"語言" = "Language";
+"收藏" = "Collect";
+"取消收藏" = "Cancel Collect";
+"請輸入文字..." = "Please enter text...";
+"輸入錯誤" = "Input Error";
+"確定" = "Confirm";
+"請填寫搜尋內容" = "Please fill in the search content";
+"電影" = "Movie";
+"音樂" = "Music";
+"共有 %@ 項收藏" = "There are %@ collections";
+"選擇語言" = "Choose Language";
+"完成" = "finish";
+"取消" = "cancel";
+"沒有追蹤項目" = "No collect items";
+"處理中..." = "Loading...";
+"關於Apple iTunes" = "About Apple iTunes";

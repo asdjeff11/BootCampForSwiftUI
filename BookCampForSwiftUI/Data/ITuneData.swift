@@ -7,9 +7,11 @@
 
 import Foundation
 
-enum MediaType:Int,CaseIterable {
+enum MediaType:Int,CaseIterable, Identifiable  {
     case 電影 = 0
     case 音樂 = 1
+    var id: Int { self.rawValue } 
+    
     func getType()->String { // 提供給api使用
         switch ( self ) {
         case .電影 :
@@ -34,7 +36,7 @@ struct ITuneResult:Codable {
     var results:[ITuneDataDetail]
 }
 
-struct ITuneDataDetail:Hashable {
+struct ITuneDataDetail:Identifiable, Hashable {
     var trackId:Int
     var trackName:String // 電影
     var artistName:String // 作者
@@ -43,6 +45,15 @@ struct ITuneDataDetail:Hashable {
     var trackViewUrl:String // url 連結
     var artworkUrl100:String // 圖片連結
     var longDescription:String? // 描述
+    
+    struct CompositeID: Hashable {
+        let trackId: Int
+        let trackName: String
+    }
+
+    var id: CompositeID {
+        CompositeID(trackId: trackId, trackName: trackName)
+    }
     
     enum CodingKeys: String, CodingKey, CaseIterable {
         case trackId = "trackId"
@@ -57,7 +68,7 @@ struct ITuneDataDetail:Hashable {
     
     
     static func == (lhs: ITuneDataDetail, rhs: ITuneDataDetail) -> Bool {
-        lhs.hashValue == rhs.hashValue
+        lhs.trackId == rhs.trackId && lhs.trackName == rhs.trackName
     }
     
     func hash(into hasher: inout Hasher) {
@@ -89,7 +100,6 @@ extension ITuneDataDetail:Codable {
 
 struct SearchITuneCondition {
     var term:String
-    //var country:String?
     var media:MediaType = .音樂
     func getUrl(offset:Int? = nil, limit:Int? = nil)->String {
         var url = "https://itunes.apple.com/search?"

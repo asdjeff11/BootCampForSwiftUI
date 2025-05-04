@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2BCF5F12D90CE78269576083 /* Pods_BookCampForSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5076CAB377CEC0EC5F2D1272 /* Pods_BookCampForSwiftUITests.framework */; };
+		9F85A4A3A61E87FC9D92666C /* Pods_BookCampForSwiftUI_BookCampForSwiftUIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660DD257DDAE5BB17EF2D78E /* Pods_BookCampForSwiftUI_BookCampForSwiftUIUITests.framework */; };
+		E3531674C262C22589A1CD49 /* Pods_BookCampForSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630E40C7DC86B8A7C615A3D /* Pods_BookCampForSwiftUI.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3041CA882DC5B6F400CD1808 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +33,33 @@
 		3041CA772DC5B6F300CD1808 /* BookCampForSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookCampForSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3041CA872DC5B6F400CD1808 /* BookCampForSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookCampForSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3041CA912DC5B6F400CD1808 /* BookCampForSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookCampForSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D21F7C24E1A025606ED4AAA /* Pods-BookCampForSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCampForSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-BookCampForSwiftUI/Pods-BookCampForSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		5076CAB377CEC0EC5F2D1272 /* Pods_BookCampForSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookCampForSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		660DD257DDAE5BB17EF2D78E /* Pods_BookCampForSwiftUI_BookCampForSwiftUIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookCampForSwiftUI_BookCampForSwiftUIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6630E40C7DC86B8A7C615A3D /* Pods_BookCampForSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookCampForSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95389C463BB6B494608149AC /* Pods-BookCampForSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCampForSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-BookCampForSwiftUITests/Pods-BookCampForSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE2C78212E054816FADECB6E /* Pods-BookCampForSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCampForSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-BookCampForSwiftUITests/Pods-BookCampForSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B1192674B1EECE1CCCD3C770 /* Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests.release.xcconfig"; path = "Target Support Files/Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests/Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F4ECDA8EA5311D1C8AA8FB57 /* Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests.debug.xcconfig"; path = "Target Support Files/Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests/Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F648EC398567229D9986BC97 /* Pods-BookCampForSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCampForSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-BookCampForSwiftUI/Pods-BookCampForSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		30A3A14D2DC622C30091C0F1 /* Exceptions for "BookCampForSwiftUI" folder in "BookCampForSwiftUI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3041CA762DC5B6F300CD1808 /* BookCampForSwiftUI */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3041CA792DC5B6F300CD1808 /* BookCampForSwiftUI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				30A3A14D2DC622C30091C0F1 /* Exceptions for "BookCampForSwiftUI" folder in "BookCampForSwiftUI" target */,
+			);
 			path = BookCampForSwiftUI;
 			sourceTree = "<group>";
 		};
@@ -52,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3531674C262C22589A1CD49 /* Pods_BookCampForSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BCF5F12D90CE78269576083 /* Pods_BookCampForSwiftUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F85A4A3A61E87FC9D92666C /* Pods_BookCampForSwiftUI_BookCampForSwiftUIUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +110,8 @@
 				3041CA8A2DC5B6F400CD1808 /* BookCampForSwiftUITests */,
 				3041CA942DC5B6F400CD1808 /* BookCampForSwiftUIUITests */,
 				3041CA782DC5B6F300CD1808 /* Products */,
+				41E73852EE37CCD537286DD6 /* Pods */,
+				C913DC03795C9BAC15A0323B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +125,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		41E73852EE37CCD537286DD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D21F7C24E1A025606ED4AAA /* Pods-BookCampForSwiftUI.debug.xcconfig */,
+				F648EC398567229D9986BC97 /* Pods-BookCampForSwiftUI.release.xcconfig */,
+				F4ECDA8EA5311D1C8AA8FB57 /* Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests.debug.xcconfig */,
+				B1192674B1EECE1CCCD3C770 /* Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests.release.xcconfig */,
+				95389C463BB6B494608149AC /* Pods-BookCampForSwiftUITests.debug.xcconfig */,
+				AE2C78212E054816FADECB6E /* Pods-BookCampForSwiftUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C913DC03795C9BAC15A0323B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6630E40C7DC86B8A7C615A3D /* Pods_BookCampForSwiftUI.framework */,
+				660DD257DDAE5BB17EF2D78E /* Pods_BookCampForSwiftUI_BookCampForSwiftUIUITests.framework */,
+				5076CAB377CEC0EC5F2D1272 /* Pods_BookCampForSwiftUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3041CA9B2DC5B6F400CD1808 /* Build configuration list for PBXNativeTarget "BookCampForSwiftUI" */;
 			buildPhases = (
+				738673A36F15CC7A4381D08B /* [CP] Check Pods Manifest.lock */,
 				3041CA732DC5B6F300CD1808 /* Sources */,
 				3041CA742DC5B6F300CD1808 /* Frameworks */,
 				3041CA752DC5B6F300CD1808 /* Resources */,
+				FA75496104A4DD4CF361F8F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -111,8 +169,6 @@
 				3041CA792DC5B6F300CD1808 /* BookCampForSwiftUI */,
 			);
 			name = BookCampForSwiftUI;
-			packageProductDependencies = (
-			);
 			productName = BookCampForSwiftUI;
 			productReference = 3041CA772DC5B6F300CD1808 /* BookCampForSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +177,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3041CA9E2DC5B6F400CD1808 /* Build configuration list for PBXNativeTarget "BookCampForSwiftUITests" */;
 			buildPhases = (
+				F72DECE1A111FA0CE3191244 /* [CP] Check Pods Manifest.lock */,
 				3041CA832DC5B6F400CD1808 /* Sources */,
 				3041CA842DC5B6F400CD1808 /* Frameworks */,
 				3041CA852DC5B6F400CD1808 /* Resources */,
@@ -134,8 +191,6 @@
 				3041CA8A2DC5B6F400CD1808 /* BookCampForSwiftUITests */,
 			);
 			name = BookCampForSwiftUITests;
-			packageProductDependencies = (
-			);
 			productName = BookCampForSwiftUITests;
 			productReference = 3041CA872DC5B6F400CD1808 /* BookCampForSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -144,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3041CAA12DC5B6F400CD1808 /* Build configuration list for PBXNativeTarget "BookCampForSwiftUIUITests" */;
 			buildPhases = (
+				95B246E434BB8F119E40917D /* [CP] Check Pods Manifest.lock */,
 				3041CA8D2DC5B6F400CD1808 /* Sources */,
 				3041CA8E2DC5B6F400CD1808 /* Frameworks */,
 				3041CA8F2DC5B6F400CD1808 /* Resources */,
+				5DB6D53EE393BB8BB5DF0844 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,8 +214,6 @@
 				3041CA942DC5B6F400CD1808 /* BookCampForSwiftUIUITests */,
 			);
 			name = BookCampForSwiftUIUITests;
-			packageProductDependencies = (
-			);
 			productName = BookCampForSwiftUIUITests;
 			productReference = 3041CA912DC5B6F400CD1808 /* BookCampForSwiftUIUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -187,11 +242,12 @@
 				};
 			};
 			buildConfigurationList = 3041CA722DC5B6F300CD1808 /* Build configuration list for PBXProject "BookCampForSwiftUI" */;
-			developmentRegion = en;
+			developmentRegion = "zh-Hant";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 3041CA6E2DC5B6F300CD1808;
 			minimizedProjectReferenceProxies = 1;
@@ -230,6 +286,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DB6D53EE393BB8BB5DF0844 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests/Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests/Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests/Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		738673A36F15CC7A4381D08B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookCampForSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95B246E434BB8F119E40917D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F72DECE1A111FA0CE3191244 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookCampForSwiftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA75496104A4DD4CF361F8F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookCampForSwiftUI/Pods-BookCampForSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookCampForSwiftUI/Pods-BookCampForSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BookCampForSwiftUI/Pods-BookCampForSwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3041CA732DC5B6F300CD1808 /* Sources */ = {
@@ -274,6 +433,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -337,6 +497,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -390,6 +551,7 @@
 		};
 		3041CA9C2DC5B6F400CD1808 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D21F7C24E1A025606ED4AAA /* Pods-BookCampForSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,12 +560,15 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BookCampForSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 5T5FLQM6AH;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookCampForSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,6 +584,7 @@
 		};
 		3041CA9D2DC5B6F400CD1808 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F648EC398567229D9986BC97 /* Pods-BookCampForSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -427,12 +593,15 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BookCampForSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 5T5FLQM6AH;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookCampForSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,6 +617,7 @@
 		};
 		3041CA9F2DC5B6F400CD1808 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95389C463BB6B494608149AC /* Pods-BookCampForSwiftUITests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -467,6 +637,7 @@
 		};
 		3041CAA02DC5B6F400CD1808 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE2C78212E054816FADECB6E /* Pods-BookCampForSwiftUITests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +657,7 @@
 		};
 		3041CAA22DC5B6F400CD1808 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4ECDA8EA5311D1C8AA8FB57 /* Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -503,6 +675,7 @@
 		};
 		3041CAA32DC5B6F400CD1808 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1192674B1EECE1CCCD3C770 /* Pods-BookCampForSwiftUI-BookCampForSwiftUIUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
